@@ -1,0 +1,230 @@
+{
+	"textures": [
+		{
+			"image": "sheet_holiday.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 397,
+				"h": 253
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "stoplight.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 168,
+						"h": 169
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 168,
+						"h": 169
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 168,
+						"h": 169
+					}
+				},
+				{
+					"filename": "lane.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 192,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 192,
+						"h": 64
+					},
+					"frame": {
+						"x": 0,
+						"y": 170,
+						"w": 192,
+						"h": 64
+					}
+				},
+				{
+					"filename": "snow.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 7,
+						"h": 7
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 7,
+						"h": 7
+					},
+					"frame": {
+						"x": 0,
+						"y": 235,
+						"w": 7,
+						"h": 7
+					}
+				},
+				{
+					"filename": "house_overlay.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 133,
+						"h": 124
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 133,
+						"h": 124
+					},
+					"frame": {
+						"x": 169,
+						"y": 0,
+						"w": 133,
+						"h": 124
+					}
+				},
+				{
+					"filename": "door.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 6,
+						"h": 42
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 6,
+						"h": 42
+					},
+					"frame": {
+						"x": 169,
+						"y": 125,
+						"w": 6,
+						"h": 42
+					}
+				},
+				{
+					"filename": "road.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 128,
+						"h": 128
+					},
+					"frame": {
+						"x": 193,
+						"y": 125,
+						"w": 128,
+						"h": 128
+					}
+				},
+				{
+					"filename": "stoplight_sign.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 75,
+						"h": 54
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 75,
+						"h": 54
+					},
+					"frame": {
+						"x": 303,
+						"y": 0,
+						"w": 75,
+						"h": 54
+					}
+				},
+				{
+					"filename": "curb.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 18,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 18,
+						"h": 128
+					},
+					"frame": {
+						"x": 379,
+						"y": 0,
+						"w": 18,
+						"h": 128
+					}
+				},
+				{
+					"filename": "sign_pole.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 45,
+						"h": 157
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 45,
+						"h": 157
+					},
+					"frame": {
+						"x": 322,
+						"y": 55,
+						"w": 45,
+						"h": 157
+					}
+				},
+				{
+					"filename": "bushes.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 19,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 19,
+						"h": 100
+					},
+					"frame": {
+						"x": 368,
+						"y": 129,
+						"w": 19,
+						"h": 100
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:fd991a3909118c14339aac9dfa26f2a7:9def2f3408d0bf0b22a9ba6923f0b7a0:e513ca7f21fcbefb1ede5670d901ad14$"
+	}
+}

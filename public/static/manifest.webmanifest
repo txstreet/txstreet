@@ -1,0 +1,36 @@
+{
+	"short_name": "TxStreet",
+	"name": "TxStreet.com",
+	"description": "Blockchain Transaction Visualizer",
+	"icons": [
+		{
+			"src": "/static/img/icons/icons-192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "/static/img/icons/icons-512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"start_url": "/",
+	"background_color": "#1cc1a6",
+	"display": "fullscreen",
+	"scope": "/",
+	"theme_color": "#1cc1a6",
+	"shortcuts": [
+		{
+			"name": "Bitcoin",
+			"url": "/v/btc"
+		},
+		{
+			"name": "Bitcoin Cash",
+			"url": "/v/bch"
+		},
+		{
+			"name": "Ethereum",
+			"url": "/v/eth"
+		}
+	]
+}

@@ -1,0 +1,12 @@
+dispatch:
+  # Beta route
+  - url: "beta.txstreet.com/*"
+    service: beta
+
+  # Production route
+  - url: "txstreet.com/*"
+    service: default
+
+  # Production route (temporary)
+  - url: "new.txstreet.com/*"
+    service: default

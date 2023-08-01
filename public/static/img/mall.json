@@ -1,0 +1,167 @@
+{
+	"textures": [
+		{
+			"image": "mall.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 516,
+				"h": 241
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "eth_post_desk.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 490,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 490,
+						"h": 90
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 490,
+						"h": 90
+					}
+				},
+				{
+					"filename": "mall.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 363,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 363,
+						"h": 150
+					},
+					"frame": {
+						"x": 0,
+						"y": 91,
+						"w": 363,
+						"h": 150
+					}
+				},
+				{
+					"filename": "rollup_sign.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 75,
+						"h": 54
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 75,
+						"h": 54
+					},
+					"frame": {
+						"x": 364,
+						"y": 91,
+						"w": 75,
+						"h": 54
+					}
+				},
+				{
+					"filename": "walkway.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 152,
+						"h": 40
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 152,
+						"h": 40
+					},
+					"frame": {
+						"x": 364,
+						"y": 146,
+						"w": 152,
+						"h": 40
+					}
+				},
+				{
+					"filename": "rollup_sign_right.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 75,
+						"h": 54
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 75,
+						"h": 54
+					},
+					"frame": {
+						"x": 440,
+						"y": 91,
+						"w": 75,
+						"h": 54
+					}
+				},
+				{
+					"filename": "eth_post.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 88,
+						"h": 34
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 88,
+						"h": 34
+					},
+					"frame": {
+						"x": 364,
+						"y": 187,
+						"w": 88,
+						"h": 34
+					}
+				},
+				{
+					"filename": "envelope.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 44,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 44,
+						"h": 24
+					},
+					"frame": {
+						"x": 453,
+						"y": 187,
+						"w": 44,
+						"h": 24
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:26da555400acc34abde01b584ab43411:e8f14e26d1ff9dc38f21e7d352708830:5271ff8e18b9161233ff7d0e4ae42944$"
+	}
+}

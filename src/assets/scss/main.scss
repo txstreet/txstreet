@@ -1,0 +1,75 @@
+@charset "utf-8";
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
+
+$tablet: 861px;
+
+$primary: #0bc2a6;
+$dark: #1f1f1f;
+$scheme-main-bis: hsl(0, 0%, 98%);
+
+$switch-focus: none;
+
+$tooltip-background-color: $black;
+$size-7: 1.2rem;
+
+$navbar-breakpoint: 0;
+// $modal-breakpoint: 0;
+$modal-card-head-radius: 0px;
+$modal-card-body-padding: 1rem;
+
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+$table-cell-border-width: 0;
+$table-striped-row-even-background-color: hsl(0, 0%, 96.5%);
+
+$navbar-item-hover-color: $primary;
+$navbar-item-active-background-color: $primary !important;
+$navbar-dropdown-item-active-background-color: $primary !important;
+$navbar-item-active-color: $scheme-main-bis !important;
+$navbar-dropdown-item-active-color: $scheme-main-bis !important;
+
+$dropdown-content-arrow: $primary;
+$navbar-dropdown-arrow: $primary;
+
+$striped-color: rgba(0, 0, 0, 0.04);
+$dark-striped-color: #e7e7e7;
+
+$column-gap: 0.45rem;
+
+$opensea: #2081E2;
+$opensea-invert: findColorInvert($opensea);
+$twitter: #55acee;
+$twitter-invert: findColorInvert($twitter);
+$discord: #5865f2;
+$discord-invert: findColorInvert($discord);
+@import "~bulma/sass/utilities/derived-variables";
+$addColors: (
+	"twitter": (
+		$twitter,
+		$twitter-invert,
+	),
+	"discord": (
+		$discord,
+		$discord-invert,
+	),
+	"opensea": (
+		$opensea,
+		$opensea-invert,
+	),
+);
+$colors: map-merge($colors, $addColors);
+
+a.navbar-item.is-active,
+.dropdown-item.is-active {
+	background-color: $navbar-item-active-background-color;
+}
+
+@import "~bulma/bulma.sass";
+@import "~bulma-extensions/bulma-switch/src/sass/index.sass";
+@import "~bulma-extensions/bulma-divider/src/sass/index.sass";
+@import "~bulma-extensions/bulma-tooltip/src/sass/index.sass";
+@import "style.scss";
+@import "toast.scss";
+@import "~bulma-multiselect/sass/multiselect";

@@ -1,0 +1,44 @@
+steps:
+    - name: node:16.5.0
+      entrypoint: yarn
+      args: ["run", "create-env"]
+      env:
+          - NODE_ENV=${_NODE_ENV}
+          - VUE_APP_MODE=${_VUE_APP_MODE}
+          - VUE_APP_INFURA=${_VUE_APP_INFURA}
+          - VUE_APP_I18N_LOCALE=${_VUE_APP_I18N_LOCALE}
+          - VUE_APP_I18N_FALLBACK_LOCALE=${_VUE_APP_I18N_FALLBACK_LOCALE}
+          - VUE_APP_SIGN_ADS=${_VUE_APP_SIGN_ADS}
+          - VUE_APP_WS_SERVER=${_VUE_APP_WS_SERVER}
+          - VUE_APP_REST_API=${_VUE_APP_REST_API}
+          - VUE_APP_MOONHEADS_SERVER=${_VUE_APP_MOONHEADS_SERVER}
+          - VUE_APP_STORAGE_URL=${_VUE_APP_STORAGE_URL}
+    - name: node:16.5.0
+      entrypoint: yarn
+      args: ["install"]
+    - name: node:16.5.0
+      entrypoint: yarn
+      args: ["run", "build"]
+    - name: "gcr.io/cloud-builders/gcloud"
+      args: ["app", "deploy", "--bucket=${_DEPLOY_BUCKET}", "--appyaml=${_APP_YAML}"]
+    # Run manually instead of with each build, affects all environments
+    # - name: "gcr.io/cloud-builders/gcloud"
+    # args: ["app", "deploy", "dispatch.yaml"]
+    # Remove old GAE versions
+    - name: "gcr.io/cloud-builders/gcloud"
+      entrypoint: "bash"
+      args:
+          - "-c"
+          - |-
+              versions=$(gcloud app versions list \
+                --service ${_SERVICE} \
+                --sort-by '~version' \
+                --format 'value(VERSION.ID)' | sed 1,5d)
+              for version in $versions; do
+                gcloud app versions delete "$version" \
+                  --service ${_SERVICE} \
+                  --quiet
+              done
+options:
+    machineType: "E2_HIGHCPU_8"
+timeout: "1600s"

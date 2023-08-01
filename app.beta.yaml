@@ -1,0 +1,15 @@
+runtime: nodejs16
+service: beta
+handlers:
+  # Serve all static files with urls ending with a file extension
+- url: /(.*\..+)$ 
+  static_files: dist/\1
+  upload: dist/(.*\..+)$
+  expiration: "1d 0h"
+  # http_headers:
+  #   Cache-Control: public, max-age=86400
+  # catch all handler to index.html
+- url: /.*
+  static_files: dist/index.html
+  upload: dist/index.html
+  expiration: "0d 0h"

@@ -1243,7 +1243,7 @@ export class Street extends Phaser.Scene {
 
 	apiTransaction(query) {
 		let promise = this.apiCall(
-			process.env.VUE_APP_REST_API + "/api/v2/blockchain/transactions/" + this.ticker + "/" + query
+			(process.env?.["VUE_APP_REST_API_" + this.ticker] || process.env.VUE_APP_REST_API) + "/api/v2/blockchain/transactions/" + this.ticker + "/" + query
 		);
 		let response = promise.then((res) => {
 			this.customCallback("newTx", "before", res);
@@ -1255,7 +1255,7 @@ export class Street extends Phaser.Scene {
 
 	apiBlock(query) {
 		let promise = this.apiCall(
-			process.env.VUE_APP_REST_API + "/api/v2/blockchain/blocks/" + this.ticker + "/" + query
+			(process.env?.["VUE_APP_REST_API_" + this.ticker] || process.env.VUE_APP_REST_API) + "/api/v2/blockchain/blocks/" + this.ticker + "/" + query
 		);
 		let response = promise.then((res) => {
 			if (res.success) return res.data;
@@ -1266,7 +1266,7 @@ export class Street extends Phaser.Scene {
 
 	apiAddress(query) {
 		let promise = this.apiCall(
-			process.env.VUE_APP_REST_API + "/api/v2/blockchain/addresses/" + this.ticker + "/" + query
+			(process.env?.["VUE_APP_REST_API_" + this.ticker] || process.env.VUE_APP_REST_API) + "/api/v2/blockchain/addresses/" + this.ticker + "/" + query
 		);
 		let response = promise.then((res) => {
 			if (res.success) return res.transactions;

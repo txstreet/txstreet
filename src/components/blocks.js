@@ -24,7 +24,7 @@ class blockFactory extends EventEmitter {
 				if (typeof hashes[0] === "string") {
 					let tasks = [];
 					hashes.forEach(hash => {
-						tasks.push(fetch(`${process.env.VUE_APP_REST_API}/static/blocks/${this.config.ticker}/${hash}?verbose=false`));
+						tasks.push(fetch(`${(process.env?.["VUE_APP_REST_API_" + this.config.ticker] || process.env.VUE_APP_REST_API)}/static/blocks/${this.config.ticker}/${hash}?verbose=false`));
 					});
 					let responses;
 					try {

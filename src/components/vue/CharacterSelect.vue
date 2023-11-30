@@ -51,7 +51,7 @@ export default {
 	methods: {
 		async getInventory() {
 			if (!state.address) return;
-			let url = process.env.VUE_APP_REST_API + "/api/v2/nft/inventory/" + state.address;
+			let url = (process.env?.["VUE_APP_REST_API_ETH"] || process.env.VUE_APP_REST_API) + "/api/v2/nft/inventory/" + state.address;
 			let result = await fetch(url);
 			let parsed = await result.json();
 
@@ -72,7 +72,7 @@ export default {
 		},
 		async getCharacter() {
 			if (!state.address) return;
-			let url = process.env.VUE_APP_REST_API + "/api/v2/nft/getCharacter/" + state.address;
+			let url = (process.env?.["VUE_APP_REST_API_ETH"] || process.env.VUE_APP_REST_API) + "/api/v2/nft/getCharacter/" + state.address;
 			let result = await fetch(url);
 			let parsed = await result.json();
 			if (!parsed.result) return;
@@ -88,7 +88,7 @@ export default {
 				message: message,
 				signature: signature,
 			});
-			let promise = await fetch(process.env.VUE_APP_REST_API + "/api/v2/nft/setCharacter", {
+			let promise = await fetch((process.env?.["VUE_APP_REST_API_ETH"] || process.env.VUE_APP_REST_API) + "/api/v2/nft/setCharacter", {
 				method: "POST",
 				headers: {
 					Accept: "application/json",

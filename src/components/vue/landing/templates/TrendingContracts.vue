@@ -53,7 +53,7 @@ export default {
 	},
 	beforeMount() {
 		this.jsonRefresher = newJsonRefresher(
-			process.env.VUE_APP_REST_API + "/static/live/trending-contracts-ETH-" + this.timeframe,
+			(process.env?.["VUE_APP_REST_API_ETH"] || process.env.VUE_APP_REST_API) + "/static/live/trending-contracts-ETH-" + this.timeframe,
 			5000
 		);
 	},

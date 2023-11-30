@@ -370,7 +370,7 @@ export default {
 			this.loadingFull = true;
 			try {
 				let response = await fetch(
-					`${process.env.VUE_APP_REST_API}/static/blocks/${this.$root.coinConfig.ticker}/${hash}`
+					`${(process.env?.["VUE_APP_REST_API_" + this.$root.coinConfig.ticker] || process.env.VUE_APP_REST_API)}/static/blocks/${this.$root.coinConfig.ticker}/${hash}`
 				);
 				let json = await response.json();
 				if (json) {

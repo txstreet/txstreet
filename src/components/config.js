@@ -1595,7 +1595,7 @@ export const userSettings = {
 };
 //add street settings to userSettings object
 for (const ticker in enabledConfig) {
-	enabledConfig[ticker].apiUrl = process.env.VUE_APP_REST_API;
+	enabledConfig[ticker].apiUrl = (process.env?.["VUE_APP_REST_API_" + ticker] || process.env.VUE_APP_REST_API);
 	enabledConfig[ticker].coinSlug = enabledConfig[ticker].coinName.replace(/\s/g, '');
 	enabledConfig[ticker].coinSlug.charAt(0).toUpperCase() + enabledConfig[ticker].coinSlug.slice(1);
 	userSettings[enabledConfig[ticker].ticker + "Settings"] = enabledConfig[ticker].userSettings;

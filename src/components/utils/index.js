@@ -110,7 +110,7 @@ export const loadBlock = async (ticker, hash, retries = 0) => {
 	if (retries > 1) return false;
 	if (retries) return loadBlockCloudFlare(ticker, hash);
 
-	let fileUrl = `${process.env.VUE_APP_REST_API}/static/blocks/${ticker}/${hash}`;
+	let fileUrl = `${(process.env?.["VUE_APP_REST_API_" + ticker] || process.env.VUE_APP_REST_API)}/static/blocks/${ticker}/${hash}`;
 
 	try {
 		const response = await fetch(fileUrl);
@@ -137,7 +137,7 @@ export const ethNewTxSetDepending = (tx, config) => {
 export const getHouseArray = async config => {
 	if (config.houseArray.length) return config.houseArray;
 	try {
-		const result = await fetch(`${process.env.VUE_APP_REST_API}/static/live/houses-${config.ticker}`);
+		const result = await fetch(`${(process.env?.["VUE_APP_REST_API_" + config.ticker] || process.env.VUE_APP_REST_API)}/static/live/houses-${config.ticker}`);
 		let houses = await result.json();
 		if (houses) {
 			houses = houses.filter(function (obj) {
@@ -249,7 +249,7 @@ export function getSocket(coinConfigOrTicker = false) {
 	if (window.txStreetSockets[socketTicker].socket !== null) {
 		return window.txStreetSockets[socketTicker];
 	}
-	window.txStreetSockets[socketTicker].socket = io(process.env.VUE_APP_WS_SERVER, {
+	window.txStreetSockets[socketTicker].socket = io(process.env?.["VUE_APP_WS_SERVER_" + socketTicker] || process.env.VUE_APP_WS_SERVER, {
 		upgrade: true,
 		transports: ["websocket"],
 		//transports: ["websocket", "polling"],
